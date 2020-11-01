@@ -1,0 +1,47 @@
+body {
+  margin: 0;
+  padding: 20px;
+}
+
+
+
+.list {
+  list-style: none;
+  padding: 0;
+  font-size: 20px;
+}
+
+
+.btn {
+  flex: 1 1 auto;
+  margin-right: 10px;
+  padding: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  width: 100px;
+  cursor: pointer;
+}
+
+
+
+.btn1 {
+  background-image: linear-gradient(to right, #84fab0 0%, #8fd3f4 51%, #84fab0 100%);
+}
+
+
+.btn2 {
+  background-image: linear-gradient(to right, #a1c4fd 0%, #c2e9fb 51%, #a1c4fd 100%);
+}
+
+.btn3 {
+  background-image: linear-gradient(to right, #f6d365 0%, #fda085 51%, #f6d365 100%);
+}
+
+.btn:hover {
+  background-position: right center;
+}
