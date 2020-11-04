@@ -1,6 +1,7 @@
 
 import React, { Component } from 'react';
-import Feedback from './Feedback/Feedback';
+import FeedbackOptions from './Components/FeedbackOptions/FeedbackOptions';
+import Statistics from './Components/Statistics/Statistics';
 
 class App extends Component {
 
@@ -9,7 +10,6 @@ class App extends Component {
   neutral: 0,
   bad: 0,
   }
-
     getData = (e) => {
     const name = e.target.name;
     this.setState(prevState => ({
@@ -17,30 +17,30 @@ class App extends Component {
     }))
   }
 
-  getTotal = () => {
-    return this.state.good + this.state.bad + this.state.neutral
+    getTotal = () => {
+      return this.state.good + this.state.bad + this.state.neutral
   }
 
-  getPositiveFeedBack = () => {
-    return this.state.good / this.getTotal()*100
+    getPositiveFeedBack = () => {
+      return this.state.good / this.getTotal()*100
   }
 
-
-
-  render() {
-     const { good, bad, neutral} = this.state;
-    return (
-      <Feedback
-        good={good}
-        bad={bad}
-        neutral={neutral}
-        getData={this.getData}
-        getTotal={this.getTotal}
-        getPositiveFeedBack={this.getPositiveFeedBack} />
-    );
+    render() {
+      const { good, bad, neutral} = this.state;
+      return (
+        <>
+          <FeedbackOptions getData={this.getData} />
+          <Statistics good={good}
+            bad={bad}
+            neutral={neutral}
+            getData={this.getData}
+            getTotal={this.getTotal}
+            getPositiveFeedBack={this.getPositiveFeedBack} />
+          </>
+      );
+    }
   }
-}
 
-export default App;
+  export default App;
 
 
