@@ -1,4 +1,5 @@
 import React from 'react';
+import PropsType from 'prop-types'
 
 const Section = ({title,children}) => {
   return (
@@ -10,3 +11,8 @@ const Section = ({title,children}) => {
 };
 
 export default Section;
+
+Section.propsType = {
+  title: PropsType.string,
+  children: PropsType.string
+}
