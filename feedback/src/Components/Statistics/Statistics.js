@@ -4,7 +4,6 @@ import PropsType from 'prop-types'
 const Statistics = ({good,bad,neutral,getTotal,getPositiveFeedBack}) => {
   return (
     <>
-    <h2>Statistic:</h2>
         <ul className="list">
           <li className="item">Good:{good}</li>
           <li className="item">Neutral:{neutral}</li>
